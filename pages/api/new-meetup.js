@@ -1,5 +1,5 @@
 import { MongoClient } from "mongodb";
-const DB_URI = 'DB_URI=mongodb+srv://nlobo:EVVCahYxLPuPK0ZR@cluster0.dkz1zrt.mongodb.net/meetups?retryWrites=true&w=majority';
+const DB_URI = process.env.DB_URI;
 
 async function newMeetup(req, res) {
   if (req.method === "POST") {

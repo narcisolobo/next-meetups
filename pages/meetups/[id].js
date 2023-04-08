@@ -2,7 +2,7 @@ import Head from "next/head";
 import { Fragment } from "react";
 import { MongoClient, ObjectId } from "mongodb";
 import MeetupDetail from "@/components/meetups/MeetupDetail";
-const DB_URI = 'DB_URI=mongodb+srv://nlobo:EVVCahYxLPuPK0ZR@cluster0.dkz1zrt.mongodb.net/meetups?retryWrites=true&w=majority';
+const DB_URI = process.env.DB_URI;
 
 function MeetupDetailsPage({ meetup }) {
   return (
